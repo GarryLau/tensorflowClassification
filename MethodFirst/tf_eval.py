@@ -26,7 +26,6 @@ flags.DEFINE_string('checkpoint_dir',  r'/home/lg/Desktop/finetune/checkpoint/mo
                     'The directory for checkpoints')
 flags.DEFINE_string('eval_dir',  r'/home/lg/Desktop/finetune/eval',
                     'Directory for writing eval event logs')
-flags.DEFINE_string('dataset_dir', r'/home/lg/projects/data/flowers', 'Location of dataset')
 
 FLAGS = flags.FLAGS
 
