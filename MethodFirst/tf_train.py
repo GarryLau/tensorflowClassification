@@ -97,7 +97,7 @@ def build_model():
     total_loss = tf.losses.get_total_loss(name='total_loss')
     # Configure the learning rate using an exponential decay.
     num_epochs_per_decay = 2.5
-    data_size = 3320
+    data_size = tf_input.TRAINING_SET_SIZE
     decay_steps = int(data_size / FLAGS.batch_size * num_epochs_per_decay)
 
     learning_rate = tf.train.exponential_decay(
