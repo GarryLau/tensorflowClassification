@@ -28,7 +28,6 @@ flags.DEFINE_string('fine_tune_checkpoint', '/home/lg/projects/mobilenet_v1_1.0_
                     'Checkpoint from which to start finetuning.')
 flags.DEFINE_string('checkpoint_dir', r'/home/lg/Desktop/finetune/checkpoint',
                     'Directory for writing training checkpoints and logs')
-flags.DEFINE_string('dataset_dir', r'/home/lg/projects/data/flowers', 'Location of dataset')
 flags.DEFINE_integer('log_every_n_steps', 100, 'Number of steps per log')
 flags.DEFINE_integer('save_summaries_secs', 100,
                      'How often to save summaries, secs')
