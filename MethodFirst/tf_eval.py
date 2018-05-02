@@ -19,7 +19,6 @@ flags.DEFINE_string('master', '', 'Session master')
 flags.DEFINE_integer('batch_size', 32, 'Batch size')
 flags.DEFINE_integer('num_classes', 5, 'Number of classes to distinguish')
 flags.DEFINE_integer('num_examples', 350, 'Number of examples to evaluate')
-flags.DEFINE_integer('image_size', 224, 'Input image resolution')
 flags.DEFINE_float('depth_multiplier', 1.0, 'Depth multiplier for mobilenet')
 flags.DEFINE_bool('quantize', False, 'Quantize training')
 flags.DEFINE_string('checkpoint_dir',  r'/home/lg/Desktop/finetune/checkpoint/model.ckpt-10000',
