@@ -5,6 +5,7 @@ import tensorflow as tf
 FLAGS = tf.app.flags.FLAGS
 tf.app.flags.DEFINE_string('data_dir', r'/home/lg/Desktop/flower_photos',
                            """Path to the train data and eval data directory.""")
+tf.app.flags.DEFINE_integer('image_size', 224, 'Input image resolution')
 tf.app.flags.DEFINE_boolean('use_fp16', False,
                             """Train the model using fp16.""")
 
