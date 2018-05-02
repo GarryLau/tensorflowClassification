@@ -96,27 +96,8 @@ def eval_model():
         eval_op=eval_ops)
 
 
-def export_eval_pbtxt():
-  """Export eval.pbtxt."""
-  g = tf.Graph()
-  with g.as_default():
-    inputs = tf.placeholder(dtype=tf.float32,shape=[None,224,224,3])
-    scope = mobilenet_v1.mobilenet_v1_arg_scope(
-        is_training=False, weight_decay=0.0)
-    with slim.arg_scope(scope):
-      _, _ = mobilenet_v1.mobilenet_v1(
-          inputs,
-          is_training=False,
-          depth_multiplier=FLAGS.depth_multiplier,
-          num_classes=FLAGS.num_classes)
-    eval_graph_file = '/home/lg/projects/mobilenet_v1_eval.pbtxt'
-    with tf.Session() as sess:
-          with open(eval_graph_file, 'w') as f:
-            f.write(str(g.as_graph_def()))
-
 def main(unused_arg):
     eval_model()
-    #export_eval_pbtxt()
 
 
 if __name__ == '__main__':
